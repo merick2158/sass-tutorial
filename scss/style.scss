@@ -1,0 +1,43 @@
+$clocks: 12;
+@import "common/mixin";
+@import "common/variables";
+
+%commonStyle {
+  padding: 20px 30px;
+  margin: 20px;
+  background-color: yellow;
+  font-size: 12px;
+}
+
+.container {
+}
+.clock {
+  // .clock__hours
+  &__hours {
+    background-color: $color;
+    @include flex-width(50%, flex, center, center);
+  }
+  // .clock__arrow-hour
+  &__arrow-hour {
+    @include flex-width(30%, block, flex-end, flex-start);
+  }
+  // .clock__arrow-minute
+  &__arrow-minute {
+    @extend %commonStyle;
+    color: red;
+  }
+  // .clock__arrow-second
+  &__arrow-second {
+    @extend %commonStyle;
+  }
+  @for $i from 1 through $clocks {
+    &_#{$i} {
+      transform: rotate(#{$i * 10%});
+    }
+  }
+}
+@media (max-width: 767px) {
+  %commonStyle {
+    font-size: 22px;
+  }
+}

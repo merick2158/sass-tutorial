@@ -1,0 +1,69 @@
+.clock__arrow-second, .clock__arrow-minute {
+  padding: 20px 30px;
+  margin: 20px;
+  background-color: yellow;
+  font-size: 12px;
+}
+
+.clock__hours {
+  background-color: #000;
+  flex: 0 0 50%;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock__arrow-hour {
+  flex: 0 0 30%;
+  max-width: 30%;
+  display: block;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.clock__arrow-minute {
+  color: red;
+}
+.clock_1 {
+  transform: rotate(10%);
+}
+.clock_2 {
+  transform: rotate(20%);
+}
+.clock_3 {
+  transform: rotate(30%);
+}
+.clock_4 {
+  transform: rotate(40%);
+}
+.clock_5 {
+  transform: rotate(50%);
+}
+.clock_6 {
+  transform: rotate(60%);
+}
+.clock_7 {
+  transform: rotate(70%);
+}
+.clock_8 {
+  transform: rotate(80%);
+}
+.clock_9 {
+  transform: rotate(90%);
+}
+.clock_10 {
+  transform: rotate(100%);
+}
+.clock_11 {
+  transform: rotate(110%);
+}
+.clock_12 {
+  transform: rotate(120%);
+}
+
+@media (max-width: 767px) {
+  .clock__arrow-minute, .clock__arrow-second {
+    font-size: 22px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

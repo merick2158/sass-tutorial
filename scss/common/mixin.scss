@@ -1,0 +1,36 @@
+@mixin flex-width($w, $d, $ai, $jc) {
+  flex: 0 0 $w;
+  max-width: $w;
+  display: $d;
+  align-items: $ai;
+  justify-content: $jc;
+}
+@mixin colorCheckbox($bgColor, $hoverBgColor) {
+  input {
+    &:checked {
+      & + label {
+        &:before {
+          background: $bgColor;
+        }
+      }
+    }
+    & + label {
+      &:before {
+        background: $bgColor;
+      }
+      &:after {
+        background: $hoverBgColor;
+        box-shadow: 2px 0 0 $hoverBgColor, 4px 0 0 $hoverBgColor,
+          4px -2px 0 $hoverBgColor, 4px -4px 0 $hoverBgColor,
+          4px -6px 0 $hoverBgColor, 4px -8px 0 $hoverBgColor;
+      }
+    }
+    &:hover {
+      & + label {
+        &:before {
+          background: $bgColor;
+        }
+      }
+    }
+  }
+}
